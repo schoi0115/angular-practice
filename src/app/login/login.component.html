@@ -1,0 +1,96 @@
+<!-- <div class="card">
+    <div class="card-body">
+        <div>
+            <input type="username" id="form" placeholder="User Name" />
+
+        </div>
+
+        <div>
+            <input type="password" id="form2" placeholder="Password" />
+
+        </div>
+
+        <button type="button" class="btn btn-primary">Sign in</button>
+
+    </div>
+</div> -->
+<!-- 
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="card-title text-center">Sign in</h4>
+                    <form>
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input #username name="" class="form-control" placeholder="User ID" type="username">
+     
+
+                            <label>Your password</label>
+                            <input #pwd class="form-control" placeholder="Password" type="password">
+
+
+                            <br>
+                            <button type="button" class="btn btn-primary btn-block"
+                                (click)="displayMessage(username.value, pwd.value)">
+                                Login </button>
+
+                                Message : {{message}}
+                                <br>
+
+        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-body">
+
+                    <h4 class="card-title text-center">Sign in</h4>
+                    <form>
+                        <div class="form-group">
+                            <label>User Name</label>
+                            <input 
+                            name="xyz"
+                            [(ngModel)]="login.username" 
+                            class="form-control" 
+                            placeholder="User ID" type="username">
+     
+
+                            <label>Your password</label>
+                            <input 
+                            name="taco" 
+                            [(ngModel)]="login.pwd" 
+                            class="form-control" 
+                            placeholder="Password" 
+                            type="password">
+
+
+                            <br>
+                            <button type="button" class="btn btn-primary btn-block"
+                                (click)="displayMessage(username, pwd)">
+                                Login </button>
+
+                                Message : {{message}}
+                                <br>
+
+        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>

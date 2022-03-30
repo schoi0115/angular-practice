@@ -1,0 +1,85 @@
+<!-- <h3>Current Click Count: {{ count }}</h3>
+<button class="btn btn-primary"
+(click)="increment()">Click</button> -->
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+<button (click)="changeColor()" (mouseover)="changeColor()" [class]="btnClasses">Test
+</button>
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+<button [style]="{'font-size': '20px', 'color': 'red'  }" [style.fontSize.px]="size" (click)="increamnet()">
+    Test
+</button>
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+<!-- <tagName #varName="someValue"></tagName> -->
+User: <input #username><br>
+Password: <input #password><br>
+<button (click)="usr=username.value; pwd=password.value">Log in</button> <br>
+Username:{{usr}} <br>
+Password:{{pwd}} <br>
+
+<!-- <input (mouseover)="1" [value]="country.value"> -->
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+<!-- [(ngModel)]="username1"  -->
+User: <input ngModel (ngModelChange)="username1=$event"><br>
+Password: <input [(ngModel)]="password1"><br>
+<button (click)="username1=username1+'- |'; password1= password1+'++'">Log in</button> <br>
+Username:{{username1}} <br>
+Password:{{password1}} <br>
+
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+
+<p *ngIf="showPara">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus itaque consequatur maiores eligendi rem,
+    suscipit sunt autem laborum veniam saepe sit vel, quam vero ullam, accusamus ad earum impedit debitis.
+</p>
+
+<button class="btn btn-success" (click)="showPara=true">Show</button>
+<button class="btn btn-danger" (click)="showPara=false">Hide</button>
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+<p *ngIf="showPara1">
+    First Para
+</p>
+<p *ngIf="!showPara1">
+    Second Para
+</p>
+<button class="btn btn-success" (click)="showPara1=true">Show</button>
+<button class="btn btn-danger" (click)="showPara1=false">Hide</button>
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+<p *ngIf="showPara2; else otherParaRef">
+    First Para
+</p>
+<ng-template #otherParaRef>
+    <p>
+        Second Para
+    </p>
+</ng-template>
+<button class="btn btn-success" (click)="showPara2=true">Show</button>
+<button class="btn btn-danger" (click)="showPara2=false">Hide</button>
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
+
+<h5>All Users</h5>
+<p *ngFor="let taco of users; let i=index">
+    {{i+1}}. {{taco.username}} || {{taco.pwd}}
+</p>
+
+<br>------------------------------------------------------------------------------------------------------------------------------
+<br>
