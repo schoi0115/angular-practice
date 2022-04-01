@@ -1,6 +1,4 @@
-import { useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { UrlSegment } from '@angular/router';
 import { LOGIN } from '../evn';
 import { Login } from '../login';
 

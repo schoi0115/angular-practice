@@ -28,7 +28,7 @@ Password:{{pwd}} <br>
 
 <br>------------------------------------------------------------------------------------------------------------------------------
 <br>
-<!-- [(ngModel)]="username1"  -->
+[(ngModel)]="username1" 
 User: <input ngModel (ngModelChange)="username1=$event"><br>
 Password: <input [(ngModel)]="password1"><br>
 <button (click)="username1=username1+'- |'; password1= password1+'++'">Log in</button> <br>
@@ -83,3 +83,4 @@ Password:{{password1}} <br>
 
 <br>------------------------------------------------------------------------------------------------------------------------------
 <br>
+

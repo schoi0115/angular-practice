@@ -1,0 +1,73 @@
+<nav class="nav" style="color:pink">
+    <div class="nav pull-left">PoolCarz</div>
+    <div class="nav pull-right ml-5">LogOut</div>
+</nav>
+
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="card">
+                <div class="card-header" style="background:rgb(103, 103, 255); color:white">
+                    Book a ride
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum fuga, non atque
+                                voluptas doloremque expedita in eaque assumenda. Et reiciendis dicta explicabo enim
+                                assumenda deserunt corrupti veritatis nemo officia repellendus!</label>
+
+                            <br>
+                            <div *ngIf="showPara; else otherParaRef" class="text-center">
+                                <button class="btn btn-primary" 
+                                
+                                >To Gotham</button>
+                                <button class="btn btn-primary">From Gotham</button>
+                                <button class="btn btn-primary">Others</button>
+                                <p style="color:#0275d8 ">Please select a ride!</p>
+                           
+
+                                <table class="table table-bordered col-12 offset-0 table-hover">
+                                    <tr (mouseover)="changeColor()" style="background-color:#0275d8; color:white">
+                                        <th>Start Point</th>
+                                        <th>End point</th>
+                                        <th>Seat Available</th>
+                                    </tr>
+                                  
+                                    <tr *ngFor="let taco of rideTable">
+                                        <td>{{taco.startPoint}}</td>
+                                        <td>{{taco.endPoint}}</td>
+                                        <td>{{taco.seatAva}}</td>
+                                    </tr>
+                                  
+                                </table>
+                            </div>
+                            <ng-template #otherParaRef>
+                                <p>
+                                </p>
+
+
+                            </ng-template>
+
+                            <button class="btn btn-primary btn-block" (click)="showPara=true">Show all Rides</button>
+
+
+                            <br>
+                            <button type="button" class="btn btn-primary btn-block">
+                                Offer A Ride! </button>
+                            <br>
+
+
+                        </div>
+                        <div class="navbar text-center fixed-bottom" style="background:rgb(206, 206, 206)">Copyright C
+                            UI Infosys Fotter</div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>

@@ -1,0 +1,6 @@
+[
+    { "startPoint": "Vanose Junction", "endPoint": "Gotham", "seatAva": "3" },
+    { "startPoint": "PTP", "endPoint": "Gotham", "seatAva": "2" },
+    { "startPoint": "Gotham", "endPoint": "East-Fort", "seatAva": "7" },
+    { "startPoint": "Gotham", "endPoint": "Central Mall", "seatAva": "5" }
+]
