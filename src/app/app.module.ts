@@ -13,7 +13,10 @@ import { FilterRidePipe } from './filter-ride.pipe';
 import { InnerComponent } from './inner/inner.component';
 import { OutterComponent } from './outter/outter.component';
 import {HttpClientModule} from '@angular/common/http';
-import { RegisterComponent } from './register/register.component'
+import { RegisterComponent } from './register/register.component';
+import { TodoComponent } from './todo/todo.component';
+import { RouterOutletComponent } from './router-outlet/router-outlet.component';
+import { ItemComponent } from './item/item.component'
 
 
 @NgModule({
@@ -28,6 +31,9 @@ import { RegisterComponent } from './register/register.component'
     InnerComponent,
     OutterComponent,
     RegisterComponent,
+    TodoComponent,
+    RouterOutletComponent,
+    ItemComponent,
 
 
   ],

@@ -1,6 +1,6 @@
 <!-- <app-stopwatch></app-stopwatch> -->
 
-<!-- <app-login></app-login> -->
+
 
 <!-- <app-practice></app-practice> -->
 
@@ -8,5 +8,19 @@
 
 <!-- <app-inner></app-inner> -->
 
-<app-register></app-register>
+<!-- <app-register></app-register> -->
+
+<!-- <app-todo></app-todo> -->
+<nav class="navbar navbar-light bg-light">
+    <a [routerLink]="['/login']">Login</a>
+    <a [routerLink]="['/todo']">todo</a>
+    <a [routerLink]="['/ride']">Ride</a>
+ 
+
+</nav>
+<router-outlet></router-outlet>
+<!-- <app-login></app-login> -->
+<!-- <app-todo></app-todo> -->
+
+
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LOGIN } from '../evn';
 import { Login } from '../login';
 
@@ -10,7 +11,7 @@ import { Login } from '../login';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
   login: Login = new Login();
 
   message = "";
@@ -18,16 +19,17 @@ export class LoginComponent implements OnInit {
   pwd = "";
 
 
-  displayMessage(_username: string, _pwd: string) {
+  displayMessage(username: string, pwd: string) {
     if (this.login.username == LOGIN.username && this.login.pwd == LOGIN.pwd) {
       this.message = "Welcome Admin"
+      this.router.navigate(['/todo'])
+
     } else {
       this.message = "You are not Admin"
     }
 
 
   }
-
 
 
 

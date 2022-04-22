@@ -11,14 +11,9 @@ import { RideService } from '../ride.service';
 export class BookRideComponent implements OnInit {
 
   constructor(private rideService: RideService) { }
-  rideTable: Ride[] = [];
-  ngOnInit(): void {
-    this.rideService.provideRides().subscribe(
-      rideArr => this.rideTable = rideArr, 
-      err => {}
-    );
-  }
+  rides: Ride[] = [];
 
+  errorMessage = "";
   indexToBgBolor = -1;
   sortBy: string = "id";
   filterBy = 'all';
@@ -31,5 +26,14 @@ export class BookRideComponent implements OnInit {
   ];
 
 
+
+  ngOnInit(): void {
+    this.rideService.provideRides().subscribe(
+      rideArr => {this.rides = rideArr},
+      err => { 
+        console.log(err)
+        this.errorMessage = "Rides could not be fetched" }
+    );
+  }
 
 }

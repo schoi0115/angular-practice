@@ -1,6 +1,8 @@
 [
-    { "startPoint": "Vanose Junction", "endPoint": "Gotham", "seatAva": "3" },
-    { "startPoint": "PTP", "endPoint": "Gotham", "seatAva": "2" },
-    { "startPoint": "Gotham", "endPoint": "East-Fort", "seatAva": "7" },
-    { "startPoint": "Gotham", "endPoint": "Central Mall", "seatAva": "5" }
+    { "id": 1, "offerId": "1", "startPoint": "Vanose Junction", "endPoint": "Gotham", "seatAva": "3" },
+    { "id": 2, "offerId": "2", "startPoint": "PTP", "endPoint": "Gotham", "seatAva": "2" },
+    { "id": 3, "offerId": "3", "startPoint": "Gotham", "endPoint": "East-Fort", "seatAva": "7" },
+    { "id": 4, "offerId": "4", "startPoint": "Gotham", "endPoint": "Central Mall", "seatAva": "5" },
+    { "id": 5, "offerId": "5", "startPoint": "New York", "endPoint": "Gotham", "seatAva": "1" },
+    { "id": 6, "offerId": "6", "startPoint": "Yonkers", "endPoint": "White Plains", "seatAva": "2" }
 ]

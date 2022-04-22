@@ -1,6 +1,6 @@
 export class Login {
-  username: string= "";
-  pwd: string = "";
+  username: any= "";
+  pwd: any = "";
   
 
 

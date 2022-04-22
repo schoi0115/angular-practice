@@ -2,8 +2,8 @@ import { Login } from "./login";
 
 export class LOGIN {
 
-  static username: any = ["Shawn", "Barbara"];
-  static pwd: any = ["Shawn", "Barbara"];
+  static username: any = "admin";
+  static pwd: any = "admin";
   
   
   }

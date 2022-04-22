@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div *ngIf="errorMessage" class="alert alert-sucess">{{errorMessage}}</div>
+
+            <div *ngIf="successMessage" class="alert alert-primary">{{successMessage}}</div>
+
+            <form [formGroup]="addItemForm" (ngSubmit)="addItem()">
+                <div class="form-group">
+                    <label> Todo Item</label>
+                    <input formControlName="todoitem" type="text" class="form-control">
+                    <div *ngIf="addItemForm.get('todoitem')?.dirty && addItemForm.get('todoitem')?.invalid">
+                        Invalid Input
+
+                    </div>
+                    <button [disabled]="addItemForm.invalid" class="btn btn-primary">Add Item</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<h3>Todo Item List</h3>
+
+<p *ngFor="let item of items">
+    {{item.id}} |
+    <span *ngIf="idToUpdate!=item.id">
+        {{item.todoitem}}
+
+        <button (click)="displayUpdatedItem(item)" class="btn btn-warning">update item</button>
+        <button class="btn btn-danger" (click)="deleteItem(item.id)">Delete</button>
+
+    </span>
+    <span *ngIf="idToUpdate==item.id">
+        <form [formGroup]="updateItemForm" (ngSubmit)="updateItem()">
+            <input formControlName="todoitem" type="text">
+            <button class="btn btn-primary">update</button>
+        </form>
+    </span>
+
+</p>
